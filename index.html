@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav class="d-flex justify-content-around align-items-center p-4">
+            <div class="logo-container d-flex align-items-center gap-2">
+                <img src="images/stethoscope 1.png" alt="">
+                <h3>SmartCare</h3>
+
+            </div>
+            <div class="menu-container d-flex gap-3">
+                <li class="menu">Home</li>
+                <li class="menu">Services</li>
+                <li class="menu">Contact us</li>
+                <li class="menu">Login</li>
+
+            </div>
+        </nav>
+
+        <!-- banner-container  -->
+         <div class="banner-container">
+            <h3>I am Salim Hossain</h3>
+            <div class="d-flex banner">
+                <div class="banner-left m-auto">
+                    <h1>Providing Quality<br> Healthcare</h1>
+                    <p class="w-50 m-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi impedit facere cumque atque! Saepe, dolorem. Quidem pariatur amet cum mollitia nostrum, sed ipsum rem eligendi eaque tempora necessitatibus dicta obcaecati inventore, neque quisquam alias, delectus omnis officia. Exercitationem, incidunt nulla.</p>
+
+                </div>
+                <div class="banner-right">
+                    <img class="bn-img" src="images/doc.png" alt="">
+                </div>
+            </div>
+
+         </div>
+    </header>
+    <main>
+        <!-- add services here  -->
+         <div class="service-container text-center">
+            <h3 class="title">Services We provide</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo blanditiis aut pariatur totam ipsum dolorem.</p>
+            <div class="swiffy-slider slider-item-show2 slider-item-reveal slider-nav-outside slider-nav-round slider-nav-visible slider-indicators-outside slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein slider-item-last-visible">
+                <ul id="service-container" class="slider-container py-4">
+                    
+                   
+                   
+                </ul>
+            
+                <button type="button" class="slider-nav" aria-label="Go left"></button>
+                <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+            
+                <div class="slider-indicators">
+                    <button class="" aria-label="Go to slide"></button>
+                    <button aria-label="Go to slide"></button>
+                    <button aria-label="Go to slide" class=""></button>
+                    <button aria-label="Go to slide" class=""></button>
+                    <button aria-label="Go to slide" class="active"></button>
+                </div>
+            </div>
+         </div>
+
+
+        <!-- all doctors section  -->
+         <div class="doctors-container row d-flex justify-content-center">
+            <div class="col-md-4 text-center">
+                <div class="d-flex justify-content-center gap-3 dropdown-holder">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Designation
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Specialization
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+            </div>
+            <div class="col-md-8">
+                <input id="search" type="text" placeholder="search....">
+                <button>Search</button>
+                <div id="doctors" class="doctors mt-5">
+                   
+                </div>
+
+            </div>
+
+         </div>
+    </main>
+
+    <footer></footer>
+
+
+    <!-- js file  -->
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+</body>
+</html>
