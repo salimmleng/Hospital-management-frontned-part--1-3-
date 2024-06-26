@@ -32,32 +32,35 @@ const displayService = (services) => {
 }
 
 const loadDoctors = (search) => {
-    fetch(`https://testing-8az5.onrender.com/doctor/list/?search=${search ? search : ""
+    document.getElementById("doctors").innerHTML = "";
+    console.log(search);
+    fetch(
+        `https://testing-8az5.onrender.com/doctor/list/?search=${search ? search : ""
         }`
     )
         .then((res) => res.json())
         .then((data) => {
-            console.log(data)
+            console.log(data);
             if (data.results.length == 0) {
-                displayNotfounddoctor();
-            }
-            else {
-                displayDoctors(data.results)
+                displayDoctorsNotFound()
+
+            } else {
+                displayDoctors(data?.results);
 
             }
-
-        })
-        .catch((err) => console.log(err));
-    search = "";
-
-}
+        });
+};
 loadDoctors()
 
+displayDoctorsNotFound = () => {
+    const parent = document.getElementById("doctors")
+    parent.innerHTML = "No found doctor"
+
+}
 const displayDoctors = (doctors) => {
     doctors.forEach((doctor) => {
 
         const parent = document.getElementById("doctors")
-        parent.innerHTML = ""
 
         const div = document.createElement("div")
         div.classList.add("doc-card")
@@ -81,13 +84,6 @@ const displayDoctors = (doctors) => {
     })
 }
 
-const displayNotfounddoctor = () => {
-    const doctor = document.getElementById("doctors")
-    doctor.innerHTML = "No doctor found with this name"
-
-
-
-}
 
 
 const laodDesignation = () => {
@@ -116,22 +112,51 @@ const loadSpecilization = () => {
                 const li = document.createElement("li")
 
                 li.classList.add("dropdown-item")
-                li.innerHTML = item.name
+                li.innerHTML = `
+                <li onclick="loadDoctors('${item.name}')" >${item.name}</li>
+                `
                 parent.appendChild(li)
 
             })
         })
 }
 
-const handleSearch = () => {
+const SearchDoctor = () => {
+    console.log("hello")
     const searchInput = document.getElementById("search")
     const value = searchInput.value
     loadDoctors(value)
     searchInput.value = ""
 
+
+}
+
+const loadReview = () =>{
+    fetch("https://testing-8az5.onrender.com/doctor/review/")
+    .then((res) => res.json())
+    .then((data) => displayReview(data))
+}
+
+const displayReview = (reviews) =>{
+    console.log(reviews)
+    reviews.forEach((review) =>{
+        const parent  = document.getElementById("review-container")
+        const div = document.createElement("div")
+        div.classList.add("review-card")
+        div.innerHTML=`
+            <img class="rev-img " src="images/man-1.jpg" alt="">
+            <h4>${review.reviewer}</h4>
+            <p>${review.body.slice(0,100)}</p>
+            <h5>${review.rating}</h5>
+        `
+        parent.appendChild(div)
+
+    })
+
 }
 
 laodDesignation()
 loadSpecilization()
+loadReview()
 
 
