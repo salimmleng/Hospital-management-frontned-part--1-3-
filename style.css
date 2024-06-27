@@ -88,3 +88,12 @@ nav{
     height: 70px;
     border-radius:50px;
 }
+footer{
+    padding: 50px;
+    background: linear-gradient(cyan, rgb(92, 214, 214));;
+}
+.doctor-img{
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+}

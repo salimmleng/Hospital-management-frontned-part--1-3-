@@ -54,7 +54,9 @@ loadDoctors()
 
 displayDoctorsNotFound = () => {
     const parent = document.getElementById("doctors")
-    parent.innerHTML = "No found doctor"
+    const div = document.createElement("div")
+    div.innerHTML = '<img src="images/nodata.png" alt="">'
+    parent.appendChild(div)
 
 }
 const displayDoctors = (doctors) => {
@@ -76,10 +78,9 @@ const displayDoctors = (doctors) => {
 
         })}
         </p>
-        <button>Details</button>
+        <button><a target="_blank" href="docDetails.html?doctorId=${doctor.id}">Details</a></button>
         `
         parent.appendChild(div)
-
 
     })
 }
