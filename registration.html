@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+</head>
+<body>
+    <nav class="d-flex justify-content-around align-items-center p-4">
+        <div class="logo-container d-flex align-items-center gap-2">
+            <img src="images/stethoscope 1.png" alt="">
+            <h3>SmartCare</h3>
+
+        </div>
+        <div class="menu-container d-flex gap-3">
+            <li class="menu"><a href="index.html">Home</a></li>
+            <li class="menu">Services</li>
+            <li class="menu">Contact us</li>
+            <li class="menu"><a href="login.html">Login</a></li>
+
+        </div>
+    </nav>
+
+    
+    <div class="login-container">
+        <div class="col-md-6">
+            <form action="">
+                <h1 class="my-5">Please Register</h1>
+                <input type="text" class="input" placeholder="username" required/>
+                <input type="text" class="input" placeholder="type first name"/>
+                <input type="text" class="input" placeholder="type last name"/>
+                <input type="email" class="input" placeholder="Email" required/>
+                <input type="password" class="input" placeholder="Password" required/>
+                <input type="password" class="input" placeholder="Confirm Password" required/>
+                <button class="log-btn">Register</button>
+                <p class="mt-3">Already registered<a href="login.html">Go to login page</a></p>
+            </form>
+
+        </div>
+        <div class="col-md-6">
+            <img class="w-100" src="images/reg.png" alt="">
+            
+        </div>
+
+    </div>
+
+
+    <footer class="row">
+        <div class="col-md-6">
+            <p><small>Copyright @ All Rights Reserved</small></p>
+            <h5>Follow us</h5>
+            <div class="icons">
+                <img src="images/LinkedIn.png" alt="">
+                <img src="images/YouTube.png" alt="">
+                <img src="images/LinkedIn.png" alt="">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <h5>Company</h5>
+            <li>About</li>
+            <li>Contact us</li>
+            <li>Careers</li>
+            <li>Blog</li>
+        </div>
+        <div class="col-md-3">
+            <h5>Support</h5>
+            <li>Getting started</li>
+            <li>Help center</li>
+            <li>Server status</li>
+            <li>Chat support</li>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous"
+        defer></script>
+
+    <script src="app.js"></script>
+    <script src="docDetails.js"></script>
+</body>
+</html>

@@ -160,4 +160,3 @@ laodDesignation()
 loadSpecilization()
 loadReview()
 
-

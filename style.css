@@ -97,3 +97,18 @@ footer{
     height: 150px;
     border-radius: 75px;
 }
+.doc-details-container{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    gap: 50px;
+    width: 75%;
+    margin: auto;
+}
+.doc-detail-btn{
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: gray;
+    color: white;
+}
