@@ -112,3 +112,27 @@ footer{
     background-color: gray;
     color: white;
 }
+.user-details-container{
+    height: 100vh;
+    width: 75%;
+    margin: auto;
+    align-items: center;
+
+}
+.user-img img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+.user-all{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: auto;
+    align-items: center;
+}
+.all-appointments-container{
+    height: 100vh;
+    width: 80%;
+    margin: auto;
+}

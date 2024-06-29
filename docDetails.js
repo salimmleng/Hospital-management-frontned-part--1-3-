@@ -80,10 +80,12 @@ const handleAppointment =() =>{
     const status = document.getElementsByName("status")
     const selected = Array.from(status).find((button)=>button.checked)
     const symtom = document.getElementById("symtom").value
+    
 
     //  getting time 
     const time = document.getElementById("time-container")
     const selectedTime = time.options[time.selectedIndex]
+    const user_id = localStorage.getItem('user_id')
 
     const info = {
         appointment_type: selected.value,
@@ -91,7 +93,7 @@ const handleAppointment =() =>{
         time: selectedTime.value,
         symptom: symtom,
         cancel: false,
-        patient: 1,
+        patient: user_id,
         doctor: param,
       };
     
