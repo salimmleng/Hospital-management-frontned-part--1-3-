@@ -85,7 +85,7 @@ const handleAppointment =() =>{
     //  getting time 
     const time = document.getElementById("time-container")
     const selectedTime = time.options[time.selectedIndex]
-    const user_id = localStorage.getItem('user_id')
+    const patient_id = localStorage.getItem('patient_id')
 
     const info = {
         appointment_type: selected.value,
@@ -93,7 +93,7 @@ const handleAppointment =() =>{
         time: selectedTime.value,
         symptom: symtom,
         cancel: false,
-        patient: user_id,
+        patient: patient_id,
         doctor: param,
       };
     
@@ -113,3 +113,22 @@ const handleAppointment =() =>{
 }
 
 getparams()
+
+
+const loadPatientId = () => {
+    const user_id1 = localStorage.getItem("user_id");
+    console.log(user_id1)
+  
+    fetch(`https://testing-8az5.onrender.com/patient/list/?user_id=${user_id1}`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data)
+        localStorage.setItem("patient_id", data[0].id);
+      });
+  };
+  
+loadPatientId();
+
+
+
+
